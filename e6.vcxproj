@@ -109,6 +109,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -129,9 +130,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Core.h" />
+    <ClInclude Include="Logging.h" />
     <ClInclude Include="Platform.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Logging.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="PlatformWin32.c" />
   </ItemGroup>

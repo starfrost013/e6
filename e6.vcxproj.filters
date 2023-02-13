@@ -19,6 +19,21 @@
     <Filter Include="Header Files\Platform">
       <UniqueIdentifier>{da082a43-c2e0-4384-87eb-f7fb71f21675}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Logging">
+      <UniqueIdentifier>{610e4b82-b022-4d54-a031-56a52609cf97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Logging">
+      <UniqueIdentifier>{8c36e9a1-6480-4d9e-af51-a4c1ae4d15dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Util">
+      <UniqueIdentifier>{a6864cda-8ca0-4d1e-a02d-7126599d8037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Util">
+      <UniqueIdentifier>{1e9f4926-ae90-4b5e-bcb2-1d4bdbb17da8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{f563a25e-1a53-4831-be01-c89289fc578c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h">
@@ -27,6 +42,9 @@
     <ClInclude Include="Platform.h">
       <Filter>Header Files\Platform</Filter>
     </ClInclude>
+    <ClInclude Include="Logging.h">
+      <Filter>Header Files\Logging</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.c">
@@ -34,6 +52,9 @@
     </ClCompile>
     <ClCompile Include="PlatformWin32.c">
       <Filter>Source Files\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Logging.c">
+      <Filter>Source Files\Logging</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
