@@ -2,6 +2,9 @@
 
 // core defines go here
 
+// core includes
+#include <stdbool.h>
+
 // Version information
 #define E6_VERSION "0.0.1"
 #define E6_BUILD_DATE __DATE__ + __TIME__

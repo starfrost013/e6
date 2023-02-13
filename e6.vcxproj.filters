@@ -16,15 +16,24 @@
     <Filter Include="Source Files\Platform">
       <UniqueIdentifier>{9dc20cc1-ef36-4eac-92a8-38957f2486df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Platform">
+      <UniqueIdentifier>{da082a43-c2e0-4384-87eb-f7fb71f21675}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Platform.h">
+      <Filter>Header Files\Platform</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlatformWin32.c">
+      <Filter>Source Files\Platform</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
