@@ -37,8 +37,17 @@
     <Filter Include="Header Files\include\SDL2">
       <UniqueIdentifier>{c09a24ed-ff68-4fd3-beb1-b2e5cc0f9f75}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Core">
+    <Filter Include="Source Files\Init">
       <UniqueIdentifier>{1c99c6df-1efa-4536-8bf5-352836c98965}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Client">
+      <UniqueIdentifier>{e6b1a55f-2cd0-4f3a-a5be-dc2ca67fd96e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Server">
+      <UniqueIdentifier>{fc7fa1b0-c08d-47b7-af3d-5d1e4616497b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Init">
+      <UniqueIdentifier>{b08dcb8c-a8a9-426c-94fc-0c61d384045c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -315,6 +324,9 @@
     <ClInclude Include="include\SDL2\SDL_vulkan.h">
       <Filter>Header Files\include\SDL2</Filter>
     </ClInclude>
+    <ClInclude Include="Init.h">
+      <Filter>Header Files\Init</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.c">
@@ -325,6 +337,12 @@
     </ClCompile>
     <ClCompile Include="Logging.c">
       <Filter>Source Files\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="Init.c">
+      <Filter>Source Files\Init</Filter>
+    </ClCompile>
+    <ClCompile Include="Socket.c">
+      <Filter>Source Files\Platform</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -337,5 +355,8 @@
     <None Include="include\SDL2\SDL_config_macosx.h.orig">
       <Filter>Header Files\include\SDL2</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="SDL2.dll" />
   </ItemGroup>
 </Project>

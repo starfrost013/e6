@@ -3,5 +3,3 @@
 
 bool Platform_Init();
 bool Platform_Shutdown(); 
-
-

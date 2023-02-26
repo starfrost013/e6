@@ -1,6 +1,8 @@
 #include "Core.h"
-#include "Platform.h"
+#include "Init.h"
 #include "Logging.h"
+#include "Platform.h"
+
 
 int main()
 {
@@ -11,4 +13,5 @@ int main()
 	}
 
 	Platform_Init();
+	Engine_Init(); 
 }

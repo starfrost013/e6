@@ -12,6 +12,10 @@
 #define E6_BUILD_DATE __DATE__ " " __TIME__
 #define E6_BUILD_STRING "E6 Version " E6_VERSION " " E6_BUILD_DATE
 
+// Backend information
+#define E6_BUILD_SDL
+#define E6_BUILD_GL
+
 // MSVC typedefs
 #if _MSC_VER
 typedef signed __int8 e6_int8;
@@ -40,16 +44,22 @@ typedef __UINT64_TYPE__ e6_uint64;
 #define E6_API __attribute__((visibility("default")))
 #endif
 
-// OS configuration
 
 #if _WIN32
+// OS configuration
 #define E6_BUILD_WINDOWS
-#define E6_BUILD_SDL
 
 // Win32 specific includes
 #include <WinSock2.h>
 #include <WS2tcpip.h>
+
+// Win32 macros to bridge the difference between BSD and Winsock sockets
+#define SOCKETVALID(s) ((s) != INVALID_SOCKET);
+#define SOCKETERROR (WSAGetLastError());
+#define SOCKETCLOSE(s) closesocket(s);
+
 #else
+#define E6_BUILD_LINUX
 // Assume that any non-Windows platform uses POSIX-style sockets instead. */
 #include <sys/socket.h>
 #include <arpa/inet.h>
@@ -57,5 +67,8 @@ typedef __UINT64_TYPE__ e6_uint64;
 #include <unistd.h> // Needed for close()
 
 typedef SOCKET int
+#define SOCKETVALID(s) ((s) >= 0);
+#define SOCKETERROR() (errno)
+#define SOCKETCLOSE() close(s)
 #endif
 
